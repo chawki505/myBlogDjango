@@ -8,18 +8,25 @@
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 </head>
 <body>
-<body>
 <div class="page-header">
+    {% if user.is_authenticated %}
+        <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+        <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+        <p class="top-menu">Hello {{ user.username }}
+            <small>(<a href="{% url 'logout' %}">Log out</a>)</small>
+        </p>
+    {% else %}
+        <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
+    {% endif %}
     <h1><a href="/">Django Blog</a></h1>
 </div>
 <div class="content container">
     <div class="row">
-        <div class="col-md-8">
+        <div class="">
             {% block content %}
             {% endblock %}
         </div>
     </div>
 </div>
-</body>
 </body>
 </html>

@@ -164,3 +164,5 @@ fabric.properties
 
 myvenv
 db.sqlite3
+.vscode
+

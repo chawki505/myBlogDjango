@@ -161,7 +161,6 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
-templates/
 
 myvenv
 db.sqlite3

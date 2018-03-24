@@ -1,4 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
 ### Python template
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -156,3 +161,4 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+templates/
